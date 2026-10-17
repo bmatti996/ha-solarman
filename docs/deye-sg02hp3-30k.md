@@ -15,6 +15,9 @@ entity names and keys and does not redirect to or depend on another YAML file.
 - HV power settings use the existing **10 W** register resolution; other current,
   temperature, SOC, AC/PV voltage and cell-voltage conversions remain specific to
   their registers. Only three PV trackers contribute to totals and power losses.
+- The writable **Max Solar Power** setting uses register `0x0154` and 10 W steps.
+  Its entity ID remains `number.solarman_pv_power` to preserve existing references;
+  the local display name distinguishes it from the measured PV Power sensor.
 
 The shared `deye_p3.yaml` supports additional LV/HV models and retains its generic
 limits. Its eight voltage minima are now `[3800, 380]`: 38 V with either the LV

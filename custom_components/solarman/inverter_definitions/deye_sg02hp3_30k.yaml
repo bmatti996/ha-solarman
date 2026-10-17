@@ -775,6 +775,7 @@ parameters:
         rule: 1
         registers: [0x00ED]
       - name: PV Power
+        friendly_name: Max Solar Power
         description: Max PV power limiter
         alt: Max Solar Power
         platform: number
